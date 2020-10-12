@@ -8,18 +8,22 @@ import androidx.room.RoomDatabase;
 
 import com.example.elder_sys.Entity.User;
 
-@Database(entities = {User.class},version = 1,exportSchema = false)
+@Database(entities = {User.class},version = 2,exportSchema = false)
 public abstract class UserDataBase extends RoomDatabase {
+    public abstract UserDao getWordDao();
 
     private static UserDataBase INSTANCE;
     public static synchronized UserDataBase getDatabase(Context context) {
         if (INSTANCE == null) {
             INSTANCE = Room.databaseBuilder(context.getApplicationContext(),UserDataBase.class,"user_database")
-                    //.fallbackToDestructiveMigration()
+                    .fallbackToDestructiveMigration()
                     .build();
         }
         return INSTANCE;
     }
-    public abstract UserDao getWordDao();
+
+
+
+
 
 }

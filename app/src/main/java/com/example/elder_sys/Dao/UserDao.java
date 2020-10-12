@@ -18,7 +18,7 @@ public interface UserDao {
     void insertWords(User... users);
 
     @Update
-    void updateWords(User... users);
+    void updateUser(User... users);
 
 
 //    @Query("SELECT * FROM User ORDER BY ID DESC")

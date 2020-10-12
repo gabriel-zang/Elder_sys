@@ -26,14 +26,20 @@ public class UserRepository {
     public void insertUser(User... users) {
         new InsertAsyncTask(userDao).execute(users);
     }
+    public void updateUser(User... users) {
+        new UpdateAsyncTask(userDao).execute(users);
+    }
 
 
     public User selectUserByName(String... username) throws ExecutionException, InterruptedException {
         return  new SelectByUsernameAsyncTask(userDao).execute(username).get();
     }
+
     public User checkLogin(String... userInfo) throws ExecutionException, InterruptedException {
         return  new CheckLoginAsyncTask(userDao).execute(userInfo).get();
     }
+
+
 
     static class InsertAsyncTask extends AsyncTask<User, Void, Void> {
         private UserDao userDao;
@@ -46,6 +52,22 @@ public class UserRepository {
         @Override
         protected Void doInBackground(User... users) {
             userDao.insertWords(users);
+            return null;
+        }
+
+    }
+
+    static class UpdateAsyncTask extends AsyncTask<User, Void, Void> {
+        private UserDao userDao;
+
+        UpdateAsyncTask(UserDao userDao) {
+            this.userDao = userDao;
+        }
+
+
+        @Override
+        protected Void doInBackground(User... users) {
+            userDao.updateUser(users);
             return null;
         }
 

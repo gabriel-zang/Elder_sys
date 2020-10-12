@@ -2,6 +2,7 @@ package com.example.elder_sys.Entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Insert;
 import androidx.room.PrimaryKey;
 
 @Entity
@@ -14,15 +15,17 @@ public class User {
     private String userName;
     @ColumnInfo(name = "passWord")
     private String passWord;
-
+    @ColumnInfo(name = "name")
+    private String name;
     @ColumnInfo(name = "age")
-    private boolean age;
+    private Integer age;
 
-    @ColumnInfo(name = "date")
-    private boolean date;
 
     @ColumnInfo(name = "sex")
-    private boolean sex;
+    private Integer sex;
+
+    @ColumnInfo(name = "emergencyContact")
+    private Integer emergencyContact;
 
     public int getId() {
         return id;
@@ -48,27 +51,35 @@ public class User {
         this.passWord = passWord;
     }
 
-    public boolean isAge() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(boolean age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
-    public boolean isDate() {
-        return date;
-    }
-
-    public void setDate(boolean date) {
-        this.date = date;
-    }
-
-    public boolean isSex() {
+    public Integer getSex() {
         return sex;
     }
 
-    public void setSex(boolean sex) {
+    public void setSex(Integer sex) {
         this.sex = sex;
+    }
+
+    public Integer getEmergencyContact() {
+        return emergencyContact;
+    }
+
+    public void setEmergencyContact(Integer emergencyContact) {
+        this.emergencyContact = emergencyContact;
     }
 }

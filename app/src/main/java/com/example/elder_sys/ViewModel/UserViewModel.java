@@ -26,6 +26,9 @@ public class UserViewModel  extends AndroidViewModel {
     public void insertUser(User... users) {
         userRepository.insertUser(users);
     }
+    public void updateUser(User... users) {
+        userRepository.updateUser(users);
+    }
 
     public User selectByUserName(String username) throws ExecutionException, InterruptedException {
         return userRepository.selectUserByName(username);

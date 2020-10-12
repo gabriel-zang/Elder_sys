@@ -60,8 +60,10 @@ public class LoginFragment extends Fragment {
                 try {
                     User user = userViewModel.checkLogin(userNameStr,passwordstr);
                     if(user != null){
+                        Bundle bundle = new Bundle();
+                        bundle.putString("username",user.getUserName());
                         NavController navController = Navigation.findNavController(v);
-                        navController.navigate(R.id.action_loginFragment_to_mianFragment);
+                        navController.navigate(R.id.action_loginFragment_to_mianFragment,bundle);
                     }else {
                         Toast.makeText(requireContext(), "账号密码错误", Toast.LENGTH_SHORT).show();
                     }

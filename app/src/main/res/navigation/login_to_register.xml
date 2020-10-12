@@ -30,5 +30,18 @@
         android:id="@+id/mianFragment"
         android:name="com.example.elder_sys.Fragment.mianFragment"
         android:label="fragment_mian"
-        tools:layout="@layout/fragment_mian" />
+        tools:layout="@layout/fragment_mian" >
+        <action
+            android:id="@+id/action_mianFragment_to_basicInfoFragment"
+            app:destination="@id/basicInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicInfoFragment"
+        android:name="com.example.elder_sys.Fragment.basicInfoFragment"
+        android:label="fragment_basic_info"
+        tools:layout="@layout/fragment_basic_info" >
+        <action
+            android:id="@+id/action_basicInfoFragment_to_mianFragment"
+            app:destination="@id/mianFragment" />
+    </fragment>
 </navigation>

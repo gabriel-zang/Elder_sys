@@ -8,7 +8,7 @@
     tools:context=".Fragment.mianFragment">
 
     <Button
-        android:id="@+id/buttonBasicInfo"
+        android:id="@+id/buttonMainBasicInfo"
         android:layout_width="140dp"
         android:layout_height="125dp"
         android:text="basic Infomation"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.199" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonMainBloodPressure"
         android:layout_width="140dp"
         android:layout_height="125dp"
         android:text="blood Pressure"
@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.199" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonMainHeartRate"
         android:layout_width="140dp"
         android:layout_height="125dp"
         android:text="heart rate"
@@ -40,22 +40,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBasicInfo"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMainBasicInfo"
         app:layout_constraintVertical_bias="0.194" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonMainHealthTip"
         android:layout_width="140dp"
         android:layout_height="125dp"
         android:text="Health tip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/buttonMainHeartRate"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMainBloodPressure"
         app:layout_constraintVertical_bias="0.194" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/buttonMainEmergencyContact"
         android:layout_width="140dp"
         android:layout_height="125dp"
         android:text="emergency contact"
@@ -63,6 +63,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMainHeartRate"
         app:layout_constraintVertical_bias="0.333" />
 </androidx.constraintlayout.widget.ConstraintLayout>
