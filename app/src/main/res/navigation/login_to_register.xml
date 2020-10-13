@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_mianFragment_to_basicInfoFragment"
             app:destination="@id/basicInfoFragment" />
+        <action
+            android:id="@+id/action_mianFragment_to_emergencyContactFragment"
+            app:destination="@id/emergencyContactFragment" />
     </fragment>
     <fragment
         android:id="@+id/basicInfoFragment"
@@ -42,6 +45,15 @@
         tools:layout="@layout/fragment_basic_info" >
         <action
             android:id="@+id/action_basicInfoFragment_to_mianFragment"
+            app:destination="@id/mianFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emergencyContactFragment"
+        android:name="com.example.elder_sys.Fragment.EmergencyContactFragment"
+        android:label="fragment_emergency_contact"
+        tools:layout="@layout/fragment_emergency_contact" >
+        <action
+            android:id="@+id/action_emergencyContactFragment_to_mianFragment"
             app:destination="@id/mianFragment" />
     </fragment>
 </navigation>

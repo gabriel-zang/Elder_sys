@@ -31,7 +31,6 @@ public class basicInfoFragment extends Fragment {
     Button buttonEdit;
     RadioGroup radioGroup;
     RadioButton radioButtonMale,radioButtonFemale;
-
     User user;
     @Override
     public void onCreate(Bundle savedInstanceState) {

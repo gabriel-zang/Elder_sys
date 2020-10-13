@@ -52,5 +52,15 @@ public class mianFragment extends Fragment {
                 navController.navigate(R.id.action_mianFragment_to_basicInfoFragment,bundle);
             }
         });
+        buttonEmergencyContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                username = getArguments().get("username").toString();
+                bundle.putString("username",username);
+                NavController navController = Navigation.findNavController(v);
+                navController.navigate(R.id.action_mianFragment_to_emergencyContactFragment,bundle);
+            }
+        });
     }
 }
