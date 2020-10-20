@@ -37,7 +37,7 @@ public class mianFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         Button buttonBasicInfo = requireActivity().findViewById(R.id.buttonMainBasicInfo);
         Button buttonBloodPressure = requireActivity().findViewById(R.id.buttonMainBloodPressure);
-        Button buttonHeartRate = requireActivity().findViewById(R.id.buttonMainHeartRate);
+        Button buttonBloodHistory = requireActivity().findViewById(R.id.buttonMainBloodHistory);
         Button buttonHealthTip = requireActivity().findViewById(R.id.buttonMainHealthTip);
         Button buttonEmergencyContact = requireActivity().findViewById(R.id.buttonMainEmergencyContact);
 
@@ -52,6 +52,16 @@ public class mianFragment extends Fragment {
                 navController.navigate(R.id.action_mianFragment_to_basicInfoFragment,bundle);
             }
         });
+        buttonBloodPressure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                username = getArguments().get("username").toString();
+                bundle.putString("username",username);
+                NavController navController = Navigation.findNavController(v);
+                navController.navigate(R.id.action_mianFragment_to_bloodPressureFragment,bundle);
+            }
+        });
         buttonEmergencyContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +70,17 @@ public class mianFragment extends Fragment {
                 bundle.putString("username",username);
                 NavController navController = Navigation.findNavController(v);
                 navController.navigate(R.id.action_mianFragment_to_emergencyContactFragment,bundle);
+            }
+        });
+
+        buttonBloodHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                username = getArguments().get("username").toString();
+                bundle.putString("username",username);
+                NavController navController = Navigation.findNavController(v);
+                navController.navigate(R.id.action_mianFragment_to_bloodHistoryFragment,bundle);
             }
         });
     }

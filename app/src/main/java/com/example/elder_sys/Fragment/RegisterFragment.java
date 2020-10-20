@@ -105,8 +105,10 @@ public class RegisterFragment extends Fragment {
                             userViewModel.insertUser(newUser);
                             InputMethodManager imm = (InputMethodManager) requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(),0);
+                            Bundle bundle = new Bundle();
+                            bundle.putString("username",newUser.getUserName());
                             NavController navController = Navigation.findNavController(v);
-                            navController.navigate(R.id.action_registerFragment_to_mianFragment);
+                            navController.navigate(R.id.action_registerFragment_to_mianFragment,bundle);
                         }else {
                             Toast.makeText(requireContext(), "密码输入不一致，请重新输入", Toast.LENGTH_SHORT).show();
                         }

@@ -32,10 +32,10 @@
         app:layout_constraintVertical_bias="0.199" />
 
     <Button
-        android:id="@+id/buttonMainHeartRate"
+        android:id="@+id/buttonMainBloodHistory"
         android:layout_width="140dp"
         android:layout_height="125dp"
-        android:text="heart rate"
+        android:text="Blood History"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.136"
@@ -50,7 +50,7 @@
         android:text="Health tip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonMainHeartRate"
+        app:layout_constraintStart_toEndOf="@+id/buttonMainBloodHistory"
         app:layout_constraintTop_toBottomOf="@+id/buttonMainBloodPressure"
         app:layout_constraintVertical_bias="0.194" />
 
@@ -63,6 +63,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMainHeartRate"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMainBloodHistory"
         app:layout_constraintVertical_bias="0.333" />
 </androidx.constraintlayout.widget.ConstraintLayout>

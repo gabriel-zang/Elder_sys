@@ -37,6 +37,12 @@
         <action
             android:id="@+id/action_mianFragment_to_emergencyContactFragment"
             app:destination="@id/emergencyContactFragment" />
+        <action
+            android:id="@+id/action_mianFragment_to_bloodPressureFragment"
+            app:destination="@id/bloodPressureFragment" />
+        <action
+            android:id="@+id/action_mianFragment_to_bloodHistoryFragment"
+            app:destination="@id/bloodHistoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/basicInfoFragment"
@@ -54,6 +60,27 @@
         tools:layout="@layout/fragment_emergency_contact" >
         <action
             android:id="@+id/action_emergencyContactFragment_to_mianFragment"
+            app:destination="@id/mianFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bloodPressureFragment"
+        android:name="com.example.elder_sys.Fragment.BloodPressureFragment"
+        android:label="fragment_blood_pressure"
+        tools:layout="@layout/fragment_blood_pressure" >
+        <action
+            android:id="@+id/action_bloodPressureFragment_to_mianFragment"
+            app:destination="@id/mianFragment" />
+        <action
+            android:id="@+id/action_bloodPressureFragment_to_bloodHistoryFragment"
+            app:destination="@id/bloodHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bloodHistoryFragment"
+        android:name="com.example.elder_sys.Fragment.BloodHistoryFragment"
+        android:label="fragment_blood_history"
+        tools:layout="@layout/fragment_blood_history" >
+        <action
+            android:id="@+id/action_bloodHistoryFragment_to_mianFragment"
             app:destination="@id/mianFragment" />
     </fragment>
 </navigation>
